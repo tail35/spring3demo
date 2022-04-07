@@ -3,8 +3,8 @@ spring:
 elasticsearch:
     rest:
         uris: 172.17.208.236:9200
-        username:
-        password:
+        username: ww
+        password: ww
 kafka:
     bootstrap-servers: 172.17.142.154:9092,172.17.142.155:9092,172.17.142.156:9092
     producer:
