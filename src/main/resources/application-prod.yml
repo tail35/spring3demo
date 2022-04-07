@@ -1,0 +1,4 @@
+spring:
+    profiles: prod
+kafka:
+    topic: Dsh-Api-New

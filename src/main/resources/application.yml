@@ -1,0 +1,57 @@
+server:
+  port: 8283
+  tomcat:
+    basedir: ./
+    accesslog:
+      enabled: true
+      directory: ./
+      file-date-format: -yyyy-MM-dd
+      pattern: '[%{yyyy-MM-dd HH:mm:ss.SSS}t] [%s] [%m] [%U] [%D] [%{h-app-id}i] [%{trackid}i]'
+    threads:
+      max: 500
+  servlet:
+    context-path: /
+
+spring:
+  profiles:
+    active: dev
+#  jackson:
+#    date-format: yyyy-MM-dd HH:mm:ss
+#    locale: zh_CN
+#    time-zone: GMT+8
+#    default-property-inclusion: non_null
+#
+##mybatis:
+##  mapper-locations: classpath*:mybatis/mapper/*.xml
+##  configuration:
+##    map-underscore-to-camel-case: true
+##  type-aliases-package: com.weimiao.live.dao.entity
+##  type-handlers-package: com.weimiao.live.dao.typehandler
+#
+##mybatis
+#mybatis-plus:
+#  mapper-locations: classpath*:mybatis/mapper/*.xml
+#  type-aliases-package: com.weimiao.live.dao.entity
+#  type-handlers-package: com.weimiao.live.dao.typehandler
+#  global-config:
+#    db-config:
+#      #主键类型  AUTO:"数据库ID自增", INPUT:"用户输入ID", ID_WORKER:"全局唯一ID (数字类型唯一ID)", UUID:"全局唯一ID UUID";
+#      id-type: AUTO
+#      logic-delete-value: -1
+#      logic-not-delete-value: 0
+#    banner: false
+#  #原生配置
+#  configuration:
+#    map-underscore-to-camel-case: true
+#    cache-enabled: false
+#    call-setters-on-nulls: true
+#    jdbc-type-for-null: 'null'
+#
+##mapper:
+##  not-empty: false
+##  identity: MYSQL
+#
+#pagehelper:
+#  helper-dialect: mysql
+#  reasonable: false
+#  offset-as-page-num: true

@@ -1,0 +1,27 @@
+spring:
+    profiles: dev
+elasticsearch:
+    rest:
+        uris: 172.17.208.236:9200
+        username:
+        password:
+kafka:
+    bootstrap-servers: 172.17.142.154:9092,172.17.142.155:9092,172.17.142.156:9092
+    producer:
+        key-serializer: org.apache.kafka.common.serialization.StringSerializer
+        value-serializer: org.apache.kafka.common.serialization.StringSerializer
+        retries: 0 # 失败重试次数
+        batch-size: 16384
+        buffer-memory: 33554432
+        acks: -1 # 取值 all, -1, 0, 1
+    consumer:
+        enable-auto-commit: true
+        auto-commit-interval: 5000
+        group-id: live_service
+        auto-offset-reset: latest # 消费offset取值earliest,latest,none（默认：latest）
+        key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+        value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    template:
+        default-topic: ceshi
+logging:
+    config: classpath:log4j2-dev.xml
