@@ -2,6 +2,7 @@ package com.controller;//package error easy case can't quest web
 
 
 import com.config.MyConfig;
+import com.dhlu3.spring3demo.Spring3demoApplication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,7 +16,8 @@ public class helloword {
     @GetMapping("/hello")
     public String sayHello() {
 
-        String tmp = mMyconfig.uris+mMyconfig.username+mMyconfig.password+"Hello World";
+        //String tmp = mMyconfig.uris+mMyconfig.username+mMyconfig.password+"Hello World";
+        String tmp = Spring3demoApplication.obj.getMessage();//test xml bean.
         return tmp;
     }
 }

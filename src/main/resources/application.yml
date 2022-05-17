@@ -1,6 +1,11 @@
 server:
   port: 8283
   tomcat:
+    uri-encoding: UTF-8
+    max-connections: 6500
+    accept-count: 1000
+    max-http-header-size: 1048576
+    max-http-post-size: 10097152
     basedir: ./
     accesslog:
       enabled: true
