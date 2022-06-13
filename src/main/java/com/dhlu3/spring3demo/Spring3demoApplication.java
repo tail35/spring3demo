@@ -37,7 +37,7 @@ public class Spring3demoApplication {
             System.out.println("3main:" + beanDir);
 
             ApplicationContext context = new FileSystemXmlApplicationContext(beanDir);
-            obj = (MyXMLBean) context.getBean("MyXMLBean");
+            obj = (MyXMLBean) context.getBean("MyXMLBean");//xml id
             String resstr =  obj.getMessage();
             System.out.println("3main:" + resstr);
 
