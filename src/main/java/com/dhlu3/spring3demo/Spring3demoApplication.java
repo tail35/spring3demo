@@ -2,7 +2,9 @@ package com.dhlu3.spring3demo;
 
 
 import com.config.MyConfig;
+import com.config.MyJdbcConfig;
 import com.config.MyXMLBean;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -22,11 +24,13 @@ import java.io.IOException;
 @SpringBootApplication
 @ComponentScan("com.controller")//load to main run,then you can use multi controler class.
 @Component
-@EnableConfigurationProperties({
-        MyConfig.class
-})
+
+@EnableConfigurationProperties(
+   {MyJdbcConfig.class,MyConfig.class}
+)
 
 public class Spring3demoApplication {
+
     static public MyXMLBean obj;
     public static void main(String[] args) {
         try {

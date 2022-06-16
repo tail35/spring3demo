@@ -19,15 +19,16 @@ public class helloword {
     @GetMapping("/hello")
     public String sayHello() {
 
-        //String tmp = mMyconfig.uris+mMyconfig.username+mMyconfig.password+"Hello World";
-        String tmp = Spring3demoApplication.obj.getMessage();//test xml bean.
-        try {
-            //Thread.sleep(10000*1000);
-
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-
-        }
+        String tmp = mMyconfig.uris+mMyconfig.username+mMyconfig.password+"Hello World";
         return tmp;
+        //String tmp = Spring3demoApplication.obj.getMessage();//test xml bean.
+//        try {
+//            //Thread.sleep(10000*1000);
+//
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//
+//        }
+//        return tmp;
     }
 }

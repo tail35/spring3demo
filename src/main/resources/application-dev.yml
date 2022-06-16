@@ -5,6 +5,10 @@ elasticsearch:
         uris: 172.17.208.236:9200
         username: ww
         password: ww
+myjdbc:
+    dbname: db
+    acc: acc
+    pwd: pwd
 kafka:
     bootstrap-servers: 172.17.142.154:9092,172.17.142.155:9092,172.17.142.156:9092
     producer:
