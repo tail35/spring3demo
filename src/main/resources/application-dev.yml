@@ -5,10 +5,13 @@ elasticsearch:
         uris: 172.17.208.236:9200
         username: ww
         password: ww
+
 myjdbc:
-    dbname: db
-    acc: acc
-    pwd: pwd
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://cow8.cn:3306/javajdbc?characterEncoding=UTF-8&serverTimezone=UTC
+    dbname: javajdbc
+    acc: root
+    pwd: wo1274haoba
 kafka:
     bootstrap-servers: 172.17.142.154:9092,172.17.142.155:9092,172.17.142.156:9092
     producer:

@@ -11,12 +11,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @CrossOrigin
 public class MyJDBC {
-    @Autowired
-    public MyJdbcConfig mMyJDBC;
-    @Autowired
-    private MyConfig mMyconfig;
+//    @Autowired
+//    public MyJdbcConfig mMyJDBC;
+//    @Autowired
+//    private MyConfig mMyconfig;
     @GetMapping("/myjdbc")
     public String myJDBC(){
-        return mMyconfig.uris + mMyJDBC.dbname;
+        //getApplicationContext();
+        //String str = mMyJDBC.url +" "+mMyJDBC.dbname+" "+mMyJDBC.acc+" "+mMyJDBC.pwd;
+        //return str;
+        return "111";
+        //return mMyconfig.uris + mMyJDBC.dbname;
     }
 }

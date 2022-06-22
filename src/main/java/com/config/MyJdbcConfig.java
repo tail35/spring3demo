@@ -9,6 +9,8 @@ import org.springframework.stereotype.Component;
 @Component
 @ConfigurationProperties(prefix = "myjdbc")
 public class MyJdbcConfig {
+    public String driverClassName;
+    public String url;
     public String dbname;
     public String acc;
     public String pwd;
