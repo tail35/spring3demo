@@ -9,6 +9,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.boot.configurationprocessor.json.JSONException;
+import org.springframework.boot.configurationprocessor.json.JSONObject;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
@@ -74,9 +76,12 @@ public class Spring3demoApplication {
             System.out.println(e.toString());
             String str = e.toString();
         }
+        //test
+        QuerySql();
     }
     String QuerySql()
     {
+        String str="";
         try {
             //第三步，创建一个会话
             stmt = conn.createStatement();
@@ -84,9 +89,20 @@ public class Spring3demoApplication {
             //stmt.executeUpdate("SQL语句");
             //或者查询记录
             rs = stmt.executeQuery("select * from name");
-            while (rs.next()) {
+            JSONObject jsonObject = new JSONObject();
 
+            while (rs.next()) {
+                String acc = rs.getString("acc");
+                String pwd = rs.getString("pwd");
+                try {
+                    jsonObject.put("acc", acc);
+                    jsonObject.put("pwd", pwd);
+                }catch (JSONException e)
+                {
+                    System.out.println("jse:" + e.toString());
+                }
             }
+            str= jsonObject.toString();
         }catch (SQLException e)
         {
 
