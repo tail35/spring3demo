@@ -15,7 +15,12 @@
     <description>spring3demo</description>
     <properties>
         <java.version>1.8</java.version>
+        <!--kafka start <spring boot:2.6.6->kafka2.8.x will crash-->
+<!--        <spring-kafka.version>2.8.4</spring-kafka.version>-->
+<!--        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
+        <!--kafka end-->
     </properties>
+
     <dependencies>
 <!--        <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -75,6 +80,19 @@
             <artifactId>jackson-databind</artifactId>
         </dependency>
         <!--end for jdbc-->
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+<!--            don't specified version.check by spring boot itselft,or easy cause version mismtach error.-->
+<!--            <version>${spring-kafka.version}</version>-->
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka-test</artifactId>
+<!--            <version>${spring-kafka.version}</version>-->
+            <scope>test</scope>
+        </dependency>
+        <!--        kafka end-->
     </dependencies>
 
     <build>

@@ -3,6 +3,7 @@ package com.dhlu3.spring3demo;
 
 import com.config.MyConfig;
 import com.config.MyJdbcConfig;
+import com.config.MyKafkaConfig;
 import com.config.MyXMLBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -33,7 +34,7 @@ import java.sql.*;
 @Component
 
 @EnableConfigurationProperties(
-   {MyJdbcConfig.class,MyConfig.class}//looks like write a line  will no error.
+   {MyJdbcConfig.class,MyConfig.class, MyKafkaConfig.class}//looks like write a line  will no error.
 )
 
 public class Spring3demoApplication {

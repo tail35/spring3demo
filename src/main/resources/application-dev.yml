@@ -13,22 +13,22 @@ myjdbc:
     acc: root
     pwd: wo1274haoba
 kafka:
-    bootstrap-servers: 172.17.142.154:9092,172.17.142.155:9092,172.17.142.156:9092
+    bootstrap_servers: 127.0.0.1:9092
     producer:
-        key-serializer: org.apache.kafka.common.serialization.StringSerializer
-        value-serializer: org.apache.kafka.common.serialization.StringSerializer
+        key_serializer: org.apache.kafka.common.serialization.StringSerializer
+        value_serializer: org.apache.kafka.common.serialization.StringSerializer
         retries: 0 # 失败重试次数
-        batch-size: 16384
-        buffer-memory: 33554432
+        batch_size: 16384
+        buffer_memory: 33554432
         acks: -1 # 取值 all, -1, 0, 1
     consumer:
-        enable-auto-commit: true
-        auto-commit-interval: 5000
-        group-id: live_service
-        auto-offset-reset: latest # 消费offset取值earliest,latest,none（默认：latest）
-        key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-        value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+        enable_auto_commit: true
+        auto_commit_interval: 5000
+        group_id: live_service
+        auto_offset_reset: latest # 消费offset取值earliest,latest,none（默认：latest）
+        key_deserializer: org.apache.kafka.common.serialization.StringDeserializer
+        value_deserializer: org.apache.kafka.common.serialization.StringDeserializer
     template:
-        default-topic: ceshi
+        default_topic: mytest
 logging:
     config: classpath:log4j2-dev.xml
