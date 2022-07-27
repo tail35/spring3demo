@@ -22,7 +22,7 @@ public class kafkaSender {
     @Autowired
     public MyKafkaConfig mMyKafkaConfig;
     @Bean
-    public KafkaTemplate<String,String>  kafkaTemplate(){
+    public KafkaTemplate<String,String>  kafkaTemplate(){//bean 默认会new 一个。并且注入到Autowired引用的地方。
         Map<String,Object> props = new HashMap<>();
         props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG,mMyKafkaConfig.bootstrap_servers);
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, mMyKafkaConfig.producer.key_serializer );
