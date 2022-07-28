@@ -93,6 +93,14 @@
             <scope>test</scope>
         </dependency>
         <!--        kafka end-->
+        <!--clickhouse end-->
+        <dependency>
+            <groupId>ru.yandex.clickhouse</groupId>
+            <artifactId>clickhouse-jdbc</artifactId>
+<!--            must write version or can't find. -->
+            <version>0.3.2</version>
+        </dependency>
+        <!--clickhouse end-->
     </dependencies>
 
     <build>
@@ -100,6 +108,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+
             </plugin>
         </plugins>
     </build>

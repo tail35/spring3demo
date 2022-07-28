@@ -5,7 +5,12 @@ elasticsearch:
         uris: 172.17.208.236:9200
         username: ww
         password: ww
-
+jdbcclickhouse:
+    address: jdbc:clickhouse://127.0.0.1:8123
+    username: dick
+    password: qwe123
+    dbName: mychdb
+    socketTimeout: 600000
 myjdbc:
     driverClassName: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://cow8.cn:3306/javajdbc?characterEncoding=UTF-8&serverTimezone=UTC

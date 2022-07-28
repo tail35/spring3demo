@@ -17,7 +17,8 @@ kafka:
 
 127.0.0.1:8283/kafka
 
-https://127.0.0.1:443/kafka
+https://127.0.0.1:448/kafka
+https://127.0.0.1:448/clickhouse
 
 
 
