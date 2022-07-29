@@ -28,6 +28,7 @@ import java.sql.*;
 //@SpringBootApplication
 @ComponentScan("com.controller")//load to main run,then you can use multi controler class.
 @ComponentScan("com.dhlu3.spring3demo")
+@ComponentScan("com.task")
 @Component
 
 @EnableConfigurationProperties(

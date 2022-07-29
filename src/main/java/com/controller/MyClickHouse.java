@@ -87,7 +87,7 @@ public class MyClickHouse {
     MyjdbcClickHouseConfig myjdbcClickHouseConfig;
     @GetMapping("/clickhouse")
     public String clickhouse(){
-        String str="select * from t2;";
+        String str="select * from t1;";
         exeSql(str);
         return "clickhouse";
     }
