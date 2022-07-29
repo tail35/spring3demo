@@ -12,5 +12,5 @@ public class MyjdbcClickHouseConfig {
     public String     username;
     public String     password;
     public String     dbName;
-    public String     socketTimeout;
+    public int     socketTimeout;
 }
