@@ -12,12 +12,13 @@ kafka:
 
 
 127.0.0.1:8283/hello
+https://127.0.0.1:448/hello
 
 127.0.0.1:8283/myjdbc
 
 127.0.0.1:8283/kafka
 
-https://127.0.0.1:443/kafka
+https://127.0.0.1:448/kafka
 
 
 
