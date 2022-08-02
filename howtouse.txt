@@ -21,6 +21,10 @@ https://127.0.0.1:448/hello
 https://127.0.0.1:448/kafka
 
 
+https://127.0.0.1:448/clickhouse
+
+
+
 
 jdbc demo
 http://www.ty2y.com/study/springmvcxlzjdbcdemospringbootb.html
